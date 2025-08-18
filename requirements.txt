@@ -1,0 +1,5 @@
+bs4
+langchain_community
+langchain-ollama
+langchain_ollama
+faiss-cpu
