@@ -1,3 +1,7 @@
-# AI Dockerfile Converter
+# Dockerfile Converter with AI
 
-To run, run `docker run --rm -it -p 11434:11434 cgr.dev/chainguard-private/ollama:latest-dev` and exec into container, then run `ollama pull llama3.2`. After that, create a venv and `pip install -r requirements.txt` and `python rag_ollama_chainguard.py Dockerfile.backend.test`.
+## How to Use
+
+1. Run `docker compose up`
+1. Ensure Ollama container is up and running. If model doesn't pull, exec in and run `ollama pull llama3.2`.
+1. In a separate terminal, run `docker exec -it rag-playground-dockerfile-converter-1 python rag_ollama_chainguard.py`

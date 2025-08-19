@@ -1,0 +1,16 @@
+services:
+  ollama:
+    image: cgr.dev/chainguard-private/ollama:latest-dev
+    ports:
+      - "11434:11434"
+    post_start: 
+      - command: ["/bin/sh", "-c", "ollama pull llama3.2"]
+    restart: unless-stopped
+
+  dockerfile-converter:
+    build:
+      context: .
+    depends_on:
+      - ollama
+    tty: true
+    stdin_open: true
