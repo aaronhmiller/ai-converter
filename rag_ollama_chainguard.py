@@ -138,7 +138,7 @@ def main():
         print("\nConverting Dockerfile...\n")
         result = qa_chain.invoke({"query": prompt})
         print("--- Conversion Result ---")
-        print(result)
+        print(result['result'])
         print("------------------------\n")
 
 if __name__ == "__main__":
