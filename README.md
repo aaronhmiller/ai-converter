@@ -13,9 +13,10 @@ This CLI tool uses RAG on an Ollama model running in the Chainguard Ollama conta
 ## How to Use
 
 1. Run `docker compose up --build`
-1. Ensure Ollama container is up and running. If model doesn't pull, exec in and run `ollama pull llama3.2`.
-1. In a separate terminal, run `docker exec -it rag-playground-dockerfile-converter-1 python rag_ollama_chainguard.py`
-1. Provide the Dockerfile path, or to exit, type `exit` or `quit`.
+1. For ease of use, put the Dockerfile(s) you want to convert in the same directory as this project
+1. Ensure Ollama container is up and running. If model doesn't pull, exec into the ollama container `docker exec -it ai-converter-ollama-1 bash` and run `ollama pull llama3.2`.
+1. In a separate terminal, run `docker exec -it ai-converter-dockerfile-converter-1 python rag_ollama_chainguard.py`
+1. Provide the Dockerfile name, or to exit, type `exit` to quit.
 
 
 ### CLI Output Example
